@@ -1,0 +1,277 @@
+<!DOCTYPE html >
+<html  xml:lang="en" lang="en">
+    <head><script></script>
+        <title>POST ad</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/dealpost.css"/>
+         <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jcarousellite_1.0.1.js"></script>
+<script src="js/jquery.galleriffic.js"></script>
+<script src="js/jquery.opacityrollover.js"></script>
+<script>
+$(document).ready(function () {
+    $(".jCarouselLite").jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        speed: 400,
+        vertical: false,
+        circular: true,
+        easing: 'easeOutQuart',
+        visible: 4,
+        start: 0,
+        scroll: 1
+    });
+});
+</script>
+    </head>
+    <body id = "page3">    
+    <header>
+  <div class="row-1">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_12">
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a class="active" href="catalogue.html">Catalogue</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contacts.html">Contacts</a></li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_9">
+          <h1> <a class="logo" href="index.html">Int<strong>e</strong>rior</a> <span>Design</span> </h1>
+        </div>
+        <div class="grid_3">
+          <form id="search-form" action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <div class="search-field">
+                <input name="search" type="text">
+                <a class="search-button" href="#"><span>search</span></a> </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+      
+        <form action="filldb.php" enctype="multipart/form-data" class="register" method='POST'>
+            <h1>POST ADVERTISEMENT</h1>
+            <fieldset class="row1">
+                <legend>contact Details
+                </legend>
+                <p>
+                    <label>Email *
+                    </label>
+                    <input type="email" name="email" autofocus/>
+                    <label>Phone *
+                    </label>
+                    <input type="tel" name="phone" maxlength="10" />
+                </p>
+                <p>
+                    <label class="obinfo">* obligatory fields
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="row2">
+                <legend>Material Details
+                </legend>
+                <p>
+                    <label>Name *
+                    </label>
+                    <input type="text" name="mat_name" class="long"/>
+                </p>
+		<p><label>Image *
+                    </label>
+  	<input type="file" name="userImage" id="userImage" class="long" accept="image/*"/>
+  </p>
+                <p>
+                    <label>cost*
+                    </label>
+                    <input type="text" name="cost"/>
+                   </p>
+                <p>
+                    <label class="optional">Description
+                    </label>
+                    <input type="text" name="desc" class="long"/>
+                </p>
+                <p>
+                    <label>City *
+                    </label>
+                    <input type="text" name="city" class="long"/>
+                </p>
+                <p>
+                    <label>Category *
+                    </label>
+                    <select name="category">
+                        <option value="1"  >Chairs
+                        </option>
+                        <option value="2" >Sofa Sets
+                        </option>
+                        <option value="3" >Tables
+                        </option>
+                        <option value="4" >TV Sets
+                        </option>
+                        <option value="5" >Others
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <label class="optional">link to dealers Website
+                    </label>
+                    <input class="long"  name="link" type="text" value="http://"/>
+
+                </p>
+				<a href="dealer_signin.html">want to update previous one ? </a>
+            </fieldset>
+            <fieldset class="row3">
+                <legend>Further Information
+                </legend>
+                <p>
+                    <label>gender *</label>
+                    
+                    <label class="gender">Male</label><input type="radio" name="gender" value="Male">
+                   <label class="gender">Female</label><input type="radio" name="gender" value="Female">
+		<label class="gender">others</label><input type="radio" name="gender" value="Other"></p>
+
+
+          
+         <p>
+                    <label>Address *
+                    </label>
+                    <input type="text" name="address" class="long"/>
+                </p>
+                
+                <div class="infobox"><h4>Helpful Information</h4>
+                    <p>1.If your item is not present on <b>BuildMyHome</b>, you may enter any category from the list closest to your item category.<br>
+2.<b>BuildMyHome</b> is a free service and does not charge you any fees to post Ads. Go ahead and enjoy it. All Ads are subject to meeting the Terms of Use and Prohibited Items Policy.<br>
+3.You can post up to 25 different Ads daily. Any duplicate ads or the same ad posted more than once will be deleted.
+</p>
+                </div>
+            </fieldset>
+            <fieldset class="row4">
+                <legend>Terms and Mailing
+                </legend>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>*  I accept the <a href="terms.html" onclick="foo()"target="_blank">Terms and Conditions</a></label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>I want to receive personalized offers by your site</label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>Allow costumers to contact me on phone no.</label>
+                </p>
+            </fieldset>
+            <div><button class="button" >Register &raquo;</button></div>
+        </form>
+    
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_4">
+          <div>Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved</div>
+          <div>Design by <a target="_blank" href="http://www.google.com/">BuildMyHOME</a></div>
+          <!-- {%FOOTER_LINK} -->
+        </div>
+        <div class="grid_4"> <span class="phone-numb"><span>+1(800)</span> 123-1234</span> </div>
+        <div class="grid_4">
+          <ul class="list-services">
+            <li><a href="#"></a></li>
+            <li><a class="item-2" href="#"></a></li>
+            <li><a class="item-3" href="#"></a></li>
+            <li><a class="item-4" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+$(window).load(function () {
+    // We only want these styles applied when javascript is enabled
+    $('div.navigation').css({
+        'width': '320px',
+        'float': 'right'
+    });
+    $('div.content').css('display', 'block');
+
+    // Initially set opacity on thumbs and add
+    // additional styling for hover effect on thumbs
+    var onMouseOutOpacity = 0.5;
+    $('#thumbs ul.thumbs li span').opacityrollover({
+        mouseOutOpacity: onMouseOutOpacity,
+        mouseOverOpacity: 0.0,
+        fadeSpeed: 'fast',
+        exemptionSelector: '.selected'
+    });
+
+    // Initialize Advanced Galleriffic Gallery
+   /* var gallery = $('#thumbs').galleriffic({
+        delay: 7000,
+        numThumbs: 12,
+        preloadAhead: 6,
+        enableTopPager: false,
+        enableBottomPager: false,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '',
+        captionContainerSel: '',
+        loadingContainerSel: '',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: 'Prev',
+        nextLinkText: 'Next',
+        nextPageLinkText: 'Next',
+        prevPageLinkText: 'Prev',
+        enableHistory: true,
+        autoStart: 7000,
+        syncTransitions: true,
+        defaultTransitionDuration: 900,
+        onSlideChange: function (prevIndex, nextIndex) {
+            // 'this' refers to the gallery, which is an extension of $('#thumbs')
+            this.find('ul.thumbs li span').css({
+                opacity: 0.5
+            })
+        },
+        onPageTransitionOut: function (callback) {
+            this.find('ul.thumbs li span').css({
+                display: 'block'
+            });
+        },
+        onPageTransitionIn: function () {
+            this.find('ul.thumbs li span').css({
+                display: 'none'
+            });
+        }
+    });*/
+});
+</script>
+    </body>
+</html>
+
+
+
+
+

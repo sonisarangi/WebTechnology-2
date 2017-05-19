@@ -1,0 +1,127 @@
+#
+# XAMPP settings
+#
+
+<IfModule env_module>
+    SetEnv MIBDIRS "C:/Program Files/xamp/php/extras/mibs"
+    SetEnv MYSQL_HOME "\\xampp\\mysql\\bin"
+    SetEnv OPENSSL_CONF "C:/Program Files/xamp/apache/bin/openssl.cnf"
+    SetEnv PHP_PEAR_SYSCONF_DIR "\\xampp\\php"
+    SetEnv PHPRC "\\xampp\\php"
+    SetEnv TMP "\\xampp\\tmp"
+</IfModule>
+
+#
+# PHP-Module setup
+#
+LoadFile "C:/Program Files/xamp/php/php5ts.dll"
+LoadFile "C:/Program Files/xamp/php/libpq.dll"
+LoadModule php5_module "C:/Program Files/xamp/php/php5apache2_4.dll"
+
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "\.phps$">
+    SetHandler application/x-httpd-php-source
+</FilesMatch>
+
+#
+# PHP-CGI setup
+#
+#<FilesMatch "\.php$">
+#    SetHandler application/x-httpd-php-cgi
+#</FilesMatch>
+#<IfModule actions_module>
+#    Action application/x-httpd-php-cgi "/php-cgi/php-cgi.exe"
+#</IfModule>
+
+
+<IfModule php5_module>
+    PHPINIDir "C:/Program Files/xamp/php"
+</IfModule>
+
+<IfModule mime_module>
+    AddType text/html .php .phps
+</IfModule>
+
+ScriptAlias /php-cgi/ "C:/Program Files/xamp/php/"
+<Directory "C:/Program Files/xamp/php">
+    AllowOverride None
+    Options None
+    Require all denied
+    <Files "php-cgi.exe">
+          Require all granted
+    </Files>
+</Directory>
+
+<Directory "C:/Program Files/xamp/cgi-bin">
+    <FilesMatch "\.php$">
+        SetHandler cgi-script
+    </FilesMatch>
+    <FilesMatch "\.phps$">
+        SetHandler None
+    </FilesMatch>
+</Directory>
+
+<Directory "C:/Program Files/xamp/htdocs/xampp">
+    <IfModule php5_module>
+    	<Files "status.php">
+    		php_admin_flag safe_mode off
+    	</Files>
+    </IfModule>
+    AllowOverride AuthConfig
+</Directory>
+
+<IfModule alias_module>
+    Alias /security "C:/Program Files/xamp/security/htdocs/"
+    <Directory "C:/Program Files/xamp/security/htdocs">
+        <IfModule php5_module>
+    		<Files "xamppsecurity.php">
+    			php_admin_flag safe_mode off
+    		</Files>
+        </IfModule>
+        AllowOverride AuthConfig
+        Require all granted
+   </Directory>
+
+    Alias /licenses "C:/Program Files/xamp/licenses/"
+    <Directory "C:/Program Files/xamp/licenses">
+        Options +Indexes
+        <IfModule autoindex_color_module>
+            DirectoryIndexTextColor  "#000000"
+            DirectoryIndexBGColor "#f8e8a0"
+            DirectoryIndexLinkColor "#bb3902"
+            DirectoryIndexVLinkColor "#bb3902"
+            DirectoryIndexALinkColor "#bb3902"
+        </IfModule>
+        Require all granted
+   </Directory>
+
+    Alias /phpmyadmin "C:/Program Files/xamp/phpMyAdmin/"
+    <Directory "C:/Program Files/xamp/phpMyAdmin">
+        AllowOverride AuthConfig
+        Require all granted
+    </Directory>
+
+    Alias /webalizer "C:/Program Files/xamp/webalizer/"
+    <Directory "C:/Program Files/xamp/webalizer">
+        <IfModule php5_module>
+    		<Files "webalizer.php">
+    			php_admin_flag safe_mode off
+    		</Files>
+        </IfModule>
+        AllowOverride AuthConfig
+        Require all granted
+    </Directory>
+</IfModule>
+
+#
+# New XAMPP security concept
+#
+<LocationMatch "^/(?i:(?:xampp|security|licenses|phpmyadmin|webalizer|server-status|server-info))">
+        Order deny,allow
+		Allow from all
+		Allow from ::1 127.0.0.0/8
+	ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</LocationMatch>
+

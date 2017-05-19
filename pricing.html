@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Interior Design | Pricing</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<script src="js/jquery-1.6.2.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<![endif]-->
+<script>
+//var data="";
+function init()
+{
+  $.get("check.php", function(data){
+    //alert(data);
+        if(data != "fail")
+        {
+          //window.location = "customer_signin.html";
+        
+          //alert(data);
+          //window.location = "postad.html";
+          sign = document.getElementById("sign");
+          sign.innerHTML = "<a >Welcome "+data+"</a>";
+          /*ul = document.getElementById("ul");
+          li = document.creatElement("li");
+          li.setAttribute("class","active");
+          li.innerHTML = data;
+          ul.appendChild(li);*/
+        }
+        }
+    );
+}
+</script>
+</head>
+<body id="page4" onload="init()">
+<!--==============================header=================================-->
+<header>
+  <div class="row-1">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_12">
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+             
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a class="active" href="pricing.html">Pricing</a></li>
+               <li id="sign"> <a href = "signup_login.html" > Sign In </li>
+              <li style="margin-top:-40px;"><a href = "signout.php">LogOut</a></li></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_9">
+          <h1> <a class="logo" href="index.html">Int<strong>e</strong>rior</a> <span>Design</span> </h1>
+        </div>
+        <div class="grid_3">
+          <form id="search-form" action="lol10.php?likename=" method="GET">
+            <fieldset>
+              <div class="search-field">
+                <input type="text" name="likename" />
+                <input class="search-button" type="submit" value="Search" />
+            </fieldset>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- content -->
+<section id="content">
+  <div class="bg-top">
+    <div class="bg-top-2">
+      <div class="bg">
+        <div class="bg-top-shadow">
+          <div class="main">
+            <div class="box">
+              <div class="padding">
+                <div class="container_12">
+                  <div class="wrapper">
+                    <div class="grid_12">
+                      <div class="indent-left p2">
+                        <h3 class="p0">Latest Income</h3>
+                      </div>
+                      <div class="wrapper p4">
+                        <article class="grid_4 alpha">
+                          <div class="indent-left">
+                            <figure class="frame2 p2"><img src="images/page4-img1.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">A folding confirtable chair.</p>
+                            <p>Used to sit infront of TV or in the balcony. Waterproof chair so that can kept anywhere and can be used in any season.</p>
+                            <div class="wrapper"> <span class="price fleft">4000rs</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                        <article class="grid_4">
+                          <div class="indent3">
+                            <figure class="frame2 p2"><img src="images/page4-img2.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">Sofa set with table and exlusive deign.</p>
+                            <p>To make your hall look like heaven.And conforatble sofa with unique color combination. With newer style.</p>
+                            <div class="wrapper"> <span class="price fleft">12000rs</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                        <article class="grid_4 omega">
+                          <div class="indent-right">
+                            <figure class="frame2 p2"><img src="images/page4-img3.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">Wallpaper,table and other interior set</p>
+                            <p>Wallpapers are the best attractions of any guests. And some lighting makes it more exotic.</p>
+                            <div class="wrapper"> <span class="price fleft">5000rs</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="wrapper">
+                        <article class="grid_4 alpha">
+                          <div class="indent-left">
+                            <figure class="frame2 p2"><img src="images/page4-img4.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">Modular kitchen with chimany</p>
+                            <p>say no to old style kitchen and ready to preapre food in a more cleaner environment.Because no compramise on health </p>
+                            <div class="wrapper"> <span class="price fleft">30000</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                        <article class="grid_4">
+                          <div class="indent3">
+                            <figure class="frame2 p2"><img src="images/page4-img5.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">A masterpiece interior design </p>
+                            <p>British people like english for a reason. Because its ravish.Its amazing. And its very affordable.Choose from a great range of sofa beds, leather sofas, corner sofas</p>
+                            <div class="wrapper"> <span class="price fleft">100000</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                        <article class="grid_4 omega">
+                          <div class="indent-right">
+                            <figure class="frame2 p2"><img src="images/page4-img6.jpg" alt=""></figure>
+                            <p class="color-4 prev-indent-bot">Whether you're looking for fabric or leather, you'll find a style to suit you in the Harveys Furniture range.</p>
+                            <p>Wooden Street confers the widest collection of sofa sets online at great deals and Unmatched offers. Now enjoy quality time with your family on a comfortable sofa-set</p>
+                            <div class="wrapper"> <span class="price fleft">$38.99</span> <a class="button fright" href="#">Read More</a> </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-bot">
+    <div class="main">
+      <div class="container_12">
+        <div class="wrapper">
+          <article class="grid_4">
+            <h3 class="p2">New Furniture</h3>
+            <div class="wrapper">
+              <figure class="img-indent frame2"><img src="images/page4-img7.jpg" alt=""></figure>
+              <p class="prev-indent-bot color-4">Classic style.</p>
+              <p class="prev-indent-bot">Like to sleep on chair? Yes we are here to help you.</p>
+              <a class="button" href="#">View More</a> </div>
+          </article>
+          <article class="grid_8">
+            <h3 class="prev-indent-bot2">Our Pricing</h3>
+            <div class="wrapper">
+              <div class="grid_4 alpha">
+                <div class="indent-right2">
+                  <ul class="price-list">
+                    <li><span>6700.00</span><a href="#">TV</a><strong>&nbsp;</strong></li>
+                    <li><span>4370.00</span><a href="#">HOME THEATER</a><strong>&nbsp;</strong></li>
+                    <li><span>5780.00</span><a href="#">FRIDGE</a><strong>&nbsp;</strong></li>
+                    <li><span>2300.00</span><a href="#">CHIMNEY</a><strong>&nbsp;</strong></li>
+                    <li><span>3650.00</span><a href="#">WASHING MACHINE</a><strong>&nbsp;</strong></li>
+                    <li class="last"><span>7900.00</span><a href="#">LIGHTINGS</a><strong>&nbsp;</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid_4 omega">
+                <div class="indent-right2">
+                  <ul class="price-list">
+                    <li><span>67000.00</span><a href="#">hall furnishing</a><strong>&nbsp;</strong></li>
+                    <li><span>43700.00</span><a href="#">Sofa set</a><strong>&nbsp;</strong></li>
+                    <li><span>57800.00</span><a href="#">Dining set</a><strong>&nbsp;</strong></li>
+                    <li><span>23000.00</span><a href="#">Wallpaper</a><strong>&nbsp;</strong></li>
+                    <li><span>36500.00</span><a href="#">Curtains</a><strong>&nbsp;</strong></li>
+                    <li class="last"><span>79000.00</span><a href="#">Modular kitchen</a><strong>&nbsp;</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_4">
+          <div>Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved</div>
+          <div>Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
+          <!-- {%FOOTER_LINK} -->
+        </div>
+        <div class="grid_4"> <span class="phone-numb"><span>+1(800)</span> 123-1234</span> </div>
+        <div class="grid_4">
+          <ul class="list-services">
+            <li><a href="#"></a></li>
+            <li><a class="item-2" href="#"></a></li>
+            <li><a class="item-3" href="#"></a></li>
+            <li><a class="item-4" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

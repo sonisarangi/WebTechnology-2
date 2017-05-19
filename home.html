@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HOMOLX</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery.galleriffic.js"></script>
+<script src="js/jquery.opacityrollover.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<![endif]-->
+<script>
+function init()
+{
+  $.get("check.php", function(data){
+    //alert(data);
+        if(data != "fail")
+        {
+          //window.location = "customer_signin.html";
+        
+          //alert(data);
+          //window.location = "postad.html";
+          alert(data);
+          sign = document.getElementById("sign");
+          sign.innerHTML = data;
+          /*ul = document.getElementById("ul");
+          li = document.creatElement("li");
+          li.setAttribute("class","active");
+          li.innerHTML = data;
+          ul.appendChild(li);*/
+        }
+       } 
+    );
+}
+
+function check()
+{
+    a = document.getElementById("anchor");
+      a.addEventListener("click", function(event) {
+      
+        event.preventDefault(); // prevent default action l.e redirecting
+    });
+  //event.preventDefault();
+  //alert("saafa");
+  $.get("check.php", function(data){
+    alert(data+"adad");
+        if(data == "fail")
+          window.location = "customer_signin.html";
+        else
+        {
+          alert(data);
+          //window.location = "postad.html";
+          
+        }
+    });
+}
+
+</script>
+</head>
+<body id="page1" onload="init()">
+<!--==============================header=================================-->
+<header>
+  <div class="row-1">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_12">
+          <nav>
+            <ul class="menu">
+              <li><a class="active" href="index.html">Home</a></li>
+              <!--li><a href="services.html">Services</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a href="pricing.html">Pricing</a></li-->
+              <li><a href="contacts.html">Contacts</a></li>
+	      <li><pre>                                            </pre></li>
+	     <li> <a href = "signup_login.html" > Sign In </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_9">
+          <h1> <a class="logo" href="index.html"><strong>B</strong>uild<strong>M</strong>y<strong>H</strong>ome</a> <span><i>smartest way to build home...</i></span> </h1>
+        </div>
+        <div class="grid_3">
+          <form id="search-form" action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <div class="search-field">
+                <input name="search" type="text">
+				
+                <a class="search-button" href="#"><span>search</span></a> </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- content -->
+<section id="content">
+  <div class="bg-top">
+    <div class="bg-top-2">
+      <div class="bg">
+        <div class="bg-top-shadow">
+          <div class="main">
+            <div class="gallery p3">
+              <div class="wrapper indent-bot">
+                <div id="gallery" class="content">
+                  <div class="wrapper">
+                    <div class="slideshow-container">
+                      <div id="slideshow" class="slideshow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="thumbs" class="navigation">
+                  <ul class="thumbs noscript">
+                    <li> <a class="thumb" href="images/gallery-img1.jpg"> <img src="images/thumb-1.jpg" alt=""><span></span> </a> </li>
+                    <li> <a class="thumb" href="images/gallery-img2.jpg"> <img src="images/thumb-2.jpg" alt=""> <span></span></a> </li>
+                    <li> <a class="thumb" href="images/gallery-img3.jpg"> <img src="images/thumb-3.jpg" alt=""> <span></span></a> </li>
+                    <li> <a class="thumb" href="images/gallery-img4.jpg"> <img src="images/thumb-4.jpg" alt=""> <span></span></a> </li>
+                    <li> <a class="thumb" href="images/gallery-img5.jpg"> <img src="images/thumb-5.jpg" alt=""> <span></span></a> </li>
+                    <li> <a class="thumb" href="images/gallery-img6.jpg"> <img src="images/thumb-6.jpg" alt=""> <span></span></a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="inner">
+                <div class="wrapper"> <span class="title img-indent3">HELLO!</span>
+                  <div class="extra-wrap indent-top2"> <strong>HOMOLX</strong> is one of best website to post advertisement and find best places to acquire your required materials. <a class="color-3" href="index.html">About</a>, <a class="color-3" href="services.html">Services</a>, <a class="color-3" href="catalogue.html">Catalogue</a>, <a class="color-3" href="pricing.html">Pricing</a>, <a class="color-3" href="contacts.html">Contact Us</a>  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_12">
+              <div class="wrapper">
+                <article class="grid_12">
+                  <h3 class="color-1">Our Services List</h3>
+                  <div class="wrapper">
+                    <article class="grid_6 alpha">
+                      <figure class="img-indent frame"><img src="images/page1-img1.jpg" alt=""></figure>
+                      <div class="extra-wrap">
+                        <div class="indent-top">
+                          <ul class="list-1">
+                            <li><div id="anchor" ><a onclick="check()">Post Advertisements</a></div></li>
+							<li><a href="view_dealer.php">See Advertisements</a></li>
+                            <li class="last"><a href="#"><br>
+                              </a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                    </article>
+                    <article class="grid_6 omega">
+                      <figure class="img-indent frame"><img src="images/page1-img2.jpg" alt=""></figure>
+                      <div class="extra-wrap">
+                        <div class="indent-top">
+                          <ul class="list-1">
+                            <li><a href="code.html">Post Requirements <br>
+                              </a></li>
+                            <li class="last"><a href="#"></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                    </article>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-bot">
+    <div class="main">
+      <div class="container_12">
+        <div class="wrapper">
+          <article class="grid_4">
+            <h3 class="prev-indent-bot">About Us</h3>
+            <p class="prev-indent-bot">This is a certified </p>
+           Customers are everything for us. You demand and we supply. There is no nothing that we can't get it for you if its in our reach. </article>
+          <article class="grid_4">
+            <h3 class="prev-indent-bot">Testimonials</h3>
+            <div class="quote">
+              <p class="prev-indent-bot">One of the best E-commerce site.Made only for customers<br>
+                This is the first step taken by them to go cashless</p>
+              <h5>Raghuram rajan</h5>
+              RBI governer</div>
+          </article>
+          <article class="grid_4">
+            <h3 class="prev-indent-bot">What’s New?</h3>
+           
+            <p class="prev-indent-bot">Quicker,faster and safer</p>
+           
+            cash on delivery. And free maintainace till 1 year.</article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_4">
+          <div>Copyright &copy; <a href="home.html">HOMOLX</a> All Rights Reserved</div>
+          
+          <!-- {%FOOTER_LINK} -->
+        </div>
+        <div class="grid_4"> 
+        <div class="grid_4">
+          <ul class="list-services">
+            <li><a href="Facebook.html"></a></li>
+            <li><a class="item-2" href="Login on twitter.html"></a></li>
+            <li><a class="item-3" href="#"></a></li>
+            <li><a class="item-4" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+$(window).load(function () {
+    // We only want these styles applied when javascript is enabled
+    $('div.navigation').css({
+        'width': '320px',
+        'float': 'right'
+    });
+    $('div.content').css('display', 'block');
+
+    // Initially set opacity on thumbs and add
+    // additional styling for hover effect on thumbs
+    var onMouseOutOpacity = 0.5;
+    $('#thumbs ul.thumbs li span').opacityrollover({
+        mouseOutOpacity: onMouseOutOpacity,
+        mouseOverOpacity: 0.0,
+        fadeSpeed: 'fast',
+        exemptionSelector: '.selected'
+    });
+
+    // Initialize Advanced Galleriffic Gallery
+    var gallery = $('#thumbs').galleriffic({
+        delay: 7000,
+        numThumbs: 12,
+        preloadAhead: 6,
+        enableTopPager: false,
+        enableBottomPager: false,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '',
+        captionContainerSel: '',
+        loadingContainerSel: '',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: 'Prev',
+        nextLinkText: 'Next',
+        nextPageLinkText: 'Next',
+        prevPageLinkText: 'Prev',
+        enableHistory: true,
+        autoStart: 7000,
+        syncTransitions: true,
+        defaultTransitionDuration: 900,
+        onSlideChange: function (prevIndex, nextIndex) {
+            // 'this' refers to the gallery, which is an extension of $('#thumbs')
+            this.find('ul.thumbs li span').css({
+                opacity: 0.5
+            })
+        },
+        onPageTransitionOut: function (callback) {
+            this.find('ul.thumbs li span').css({
+                display: 'block'
+            });
+        },
+        onPageTransitionIn: function () {
+            this.find('ul.thumbs li span').css({
+                display: 'none'
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Interior Design | Services</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+<script src="js/jquery-1.6.2.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<![endif]-->
+<script>
+//var data="";
+function init()
+{
+	$.get("check.php", function(data){
+		//alert(data);
+        if(data != "fail")
+        {
+        	//window.location = "customer_signin.html";
+        
+        	//alert(data);
+        	//window.location = "postad.html";
+        	sign = document.getElementById("sign");
+        	sign.innerHTML = "<a >Welcome "+data+"</a>";
+        	/*ul = document.getElementById("ul");
+        	li = document.creatElement("li");
+        	li.setAttribute("class","active");
+        	li.innerHTML = data;
+        	ul.appendChild(li);*/
+        }
+        }
+    );
+}
+</script>
+</head>
+<body id="page2" onload="init()">
+<!--==============================header=================================-->
+<header>
+  <div class="row-1">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_12">
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="services.html">Services</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+			  <li id="sign"> <a href = "signup_login.html" > Sign In </li>
+       <li style="margin-top:-40px;"><a href = "signout.php">LogOut</a></li></li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="main">
+      <div class="container_12">
+        <div class="grid_9">
+          <h1> <a class="logo" href="index.html">Int<strong>e</strong>rior</a> <span>Design</span> </h1>
+        </div>
+        <div class="grid_3">
+          <form id="search-form" action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+              <div class="search-field">
+                <input name="search" type="text">
+                <a class="search-button" href="#"><span>search</span></a> </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- content -->
+<section id="content">
+  <div class="bg-top">
+    <div class="bg-top-2">
+      <div class="bg">
+        <div class="bg-top-shadow">
+          <div class="main">
+            <div class="box p3">
+              <div class="padding">
+                <div class="container_12">
+                  <div class="wrapper">
+                    <div class="grid_12">
+                      <div class="wrapper">
+                        <article class="grid_4 alpha">
+                          <div class="indent">
+                            <h3 class="prev-indent-bot2">Interior Services</h3>
+                            <ul class="list-2">
+                              <li><a href="#">Sofa sets</a></li>
+                              <li><a href="#">TV sets</a></li>
+                              <li><a href="#">Chairs</a></li>
+                              <li><a href="#">tables</a></li>
+                              <li><a href="#">Wallpapers</a></li>
+                              <li><a href="#">Flower pots and curtain</a></li>
+                              <li><a href="#">Lightings</a></li>
+                              <li><a href="#">Music systems</a></li>
+                              <li><a href="#">Modular kitchen</a></li>
+                              <li class="last-item"><a href="#">And what you demand</a></li>
+                            </ul>
+                          </div>
+                        </article>
+                        <article class="grid_8 omega">
+                          <div class="indent-right">
+                            <h3 class="p2">Company Profile</h3>
+                            <div class="wrapper prev-indent-bot2">
+                              <figure class="img-indent2 frame2"><img src="images/page2-img1.jpg" alt=""></figure>
+                              <div class="extra-wrap">
+                                <h6 class="prev-indent-bot">Why we are best? </h6>
+                                Best quality guarantee : All our experts are pro of their field which ensures perfect assignment as per instructions.
+
+Best price guarantee : We deliver quality work at very competitive price, We know, we are helping students so its priced cheap.
+
+Always open : Our support team and experts are available 24x7 to help you.
+
+Plagiarism free : All our work is checked by plagiarism checking software like Turnitin to ensure you get non- plagiarised assignment. All our work is original and unique.
+
+Deadline guaranteed : Myassignmenthelp always deliver work before deadline so that any query can be resolved in time.</p>
+                            <a class="button" href="#">Read More</a> </div>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container_12">
+              <div class="wrapper">
+                <article class="grid_4">
+                  <h3 class="color-1 p2">Consultation</h3>
+                  <span class="text-1">Why only sell. Please demand. Because without you we cant even exist.</span> </article>
+                <article class="grid_4">
+                  <h3 class="color-1 p2">Our Mission</h3>
+                  <span class="text-1">Welcome to Inc.com, the place where entrepreneurs and business owners can find useful information, advice, insights, resources and inspiration for running and growing their businesses.</span> </article>
+                <article class="grid_4">
+                  <h3 class="color-1 indent-bot">Consultation</h3>
+                  <form id="subscribe-form" action="#" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                      <div class="subscribe-field">
+                        <input type="text">
+                      </div>
+                      <a class="button" href="#">Subscribe</a>
+                    </fieldset>
+                  </form>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-bot">
+    <div class="main">
+      <div class="container_12">
+        <div class="wrapper">
+          <article class="grid_4">
+            <div class="indent-right2">
+              <h3 class="prev-indent-bot2">Space Planning</h3>
+              <ul class="list-2">
+                <li><a href="#">Measurment will be taken by us</a></li>
+                <li><a href="#">Pricing depending on space</a></li>
+                <li><a href="#">Areawise charge</a></li>
+                <li><a href="#">All plans will showcased </a></li>
+                <li class="last-item"><a href="#">Full transperancy</a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="grid_8">
+            <h3 class="p2">Selection &amp; Installation</h3>
+            <div class="wrapper">
+              <figure class="img-indent2 frame2"><img src="images/page2-img2.jpg" alt=""></figure>
+              <div class="extra-wrap">
+                <h6 class="p1"> A common house upgrade is to replace or install a new interior door, which is cheaper than an exterior door, as it easier to install and that reduces the labor cost. For this example, we'll look at the cost of installing a common wood slab door in an existing door frame. The average cost of this project is $500. </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_4">
+          <div>Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved</div>
+          <div>Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
+          <!-- {%FOOTER_LINK} -->
+        </div>
+        <div class="grid_4"> <span class="phone-numb"><span>+1(800)</span> 123-1234</span> </div>
+        <div class="grid_4">
+          <ul class="list-services">
+            <li><a href="#"></a></li>
+            <li><a class="item-2" href="#"></a></li>
+            <li><a class="item-3" href="#"></a></li>
+            <li><a class="item-4" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
